@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<body class="caesar"></body>
+<link rel="stylesheet" href="../styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../js code/caesar.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Caesar Cipher</h1>
+        <nav>
+            <a href="../html code/index.html">Main Page</a><br>
+            <a href="../html code/monoalphabetic.html">Monoalphabetic Cipher</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Defination</h2>
+        <p>
+            The Caesar Cipher is a simple substitution cipher that shifts each letter in the plaintext by a fixed
+            number of places down or up the alphabet. For example, with a shift of 3, A becomes D, B becomes E, and so
+            on. Decryption involves shifting the letters back by the same number of places.
+        </p>
+        <img src="../pictures/caesar_diagram.png" alt="Caesar Cipher Diagram">
+    </section>
+
+    <section>
+        <h2>Encryption Tool</h2>
+        <label for="caesar-plaintext">Enter Plaintext:</label>
+        <input type="text" id="caesar-plaintext" placeholder="Enter plaintext here...">
+        <label for="caesar-shift">Shift Key:</label>
+        <input type="number" id="caesar-shift" min="1" max="25" value="3">
+        <button onclick="encryptCaesar()">Encrypt</button>
+        <p id="caesar-ciphertext"></p>
+    </section>
+
+    <section>
+        <h2>Decryption Tool</h2>
+        <label for="caesar-ciphertext-input">Enter Ciphertext:</label>
+        <input type="text" id="caesar-ciphertext-input" placeholder="Enter ciphertext here...">
+        <label for="caesar-shift-decrypt">Shift Key:</label>
+        <input type="number" id="caesar-shift-decrypt" min="1" max="25" value="3">
+        <button onclick="decryptCaesar()">Decrypt</button>
+        <p id="caesar-plaintext-output"></p>
+    </section>
+    <section>
+        <h2>Quiz</h2>
+        <form id="caesar-quiz" onsubmit="submitQuiz(event)">
+            <div>
+                <p>1. What is the shift key in a Caesar Cipher?</p>
+                <label>
+                    <input type="radio" name="q1" value="A"> The number of letters in the alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="B"> The length of the plaintext.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="C"> The number of positions each letter is shifted in the
+                    alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="D"> The position of the first letter in the alphabet.
+                </label>
+            </div><br>
+            <div>
+                <p>2. What happens to letters that shift beyond the end of the alphabet?</p>
+                <label>
+                    <input type="radio" name="q2" value="A"> They wrap around to the beginning of the alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="B"> They stop shifting.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="C"> They reverse back.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="D"> They stay at the end of the alphabet.
+                </label>
+            </div><br>
+            <div>
+                <p>3. The Caesar Cipher is a form of monoalphabetic substitution cipher.</p>
+                <label>
+                    <input type="radio" name="q3" value="A"> False.
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="B"> True.
+                </label>
+                <label>
+            </div><br>
+            <div>
+                <p>4. In the Caesar Cipher, how many positions can each letter in the plaintext be shifted?</p>
+                <label>
+                    <input type="radio" name="q4" value="A"> A maximum of 26 positions.
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="B"> Up to the length of the key.
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="C"> A fixed number based on the letter's position in the alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="D"> Any number of positions within the range of the alphabet.
+                </label>
+            </div><br>
+            <div>
+                <p>5. The Caesar Cipher uses a complex key for encryption and decryption.</p>
+                <label>
+                    <input type="radio" name="q5" value="A"> True.
+                </label><br>
+                <label>
+                    <input type="radio" name="q5" value="B"> False.
+                </label>
+            </div><br>
+            <div>
+                <p>6. How many different possible keys exist in a standard Caesar Cipher?</p>
+                <label>
+                    <input type="radio" name="q6" value="A"> 10.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="B"> 26.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="C"> 52.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="D"> 100.
+                </label>
+            </div><br>
+            <button type="submit">Submit Quiz</button>
+        </form>
+        <p id="caesar-quiz-results"></p>
+    </section>
+</body>
+</html>

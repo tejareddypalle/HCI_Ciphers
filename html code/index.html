@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<body class="index"></body>
+<link rel="stylesheet" href="../styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption & Decryption Educational Tool</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file for styling -->
+</head>
+
+<body>
+    <header>
+        <h1>Encryption & Decryption Educational Tool</h1>
+        <p>Welcome to the educational tool that helps you learn and practice encryption and decryption using the Caesar and Monoalphabetic Ciphers.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../html code/caesar.html">Caesar Cipher</a></li>
+            <li><a href="../html code/monoalphabetic.html">Monoalphabetic Cipher</a></li>
+        </ul>
+    </nav>
+
+    <main><br>
+        <section>
+            <h2>Caesar Cipher</h2><br>
+            <p>The Caesar Cipher is a simple substitution cipher that shifts the letters of the alphabet by a fixed number of positions. Click the link above to learn more and practice using the Caesar Cipher.</p><br>
+            <button onclick="openCaesarCipherpdf()">Caesar Cipher Document</button>
+            <script>
+                function openCaesarCipherpdf() {
+                    window.open('../documents/caesar_cipher.pdf', '_blank');
+                }
+            </script>
+        </section>
+        <section><br>
+            <h2>Monoalphabetic Cipher</h2><br>
+            <p>The Monoalphabetic Cipher is a substitution cipher that replaces each letter in the plaintext with a different letter from the alphabet based on a given key. Click the link above to learn more and practice using the Monoalphabetic Cipher.</p><br>
+            <button onclick="openMonoalphabeticCipherPdf()">Monoalphabetic Cipher Document</button>
+            <script>
+                function openMonoalphabeticCipherPdf() {
+                    window.open('../documents/monoalphacipher.pdf', '_blank');
+                }
+            </script>
+        </section>
+    </main>
+
+    <footer><br><br><br><br><br><br><br><br>
+        <p>&copy; 2024 TEJA REDDY PALLE. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

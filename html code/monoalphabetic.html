@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<body class="monoalphabetic"></body>
+<link rel="stylesheet" href="../styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monoalphabetic Cipher</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js code/monoalphabetic.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Monoalphabetic Cipher</h1>
+        <nav>
+            <a href="../html code/index.html">Main Page</a><br>
+            <a href="../html code/caesar.html">Caesar Cipher</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Defination</h2>
+        <p>
+            The Monoalphabetic Cipher is a substitution cipher where each letter in the plaintext is replaced by a
+            different letter according to a fixed substitution alphabet. The substitution alphabet can be any
+            rearrangement of the standard alphabet.
+        </p>
+        <img src="../pictures/monoalphabetic_diagram.png" alt="Monoalphabetic Cipher Diagram">
+    </section>
+
+    <section>
+        <h2>Encryption Tool</h2>
+        <label for="mono-plaintext">Enter Plaintext:</label>
+        <input type="text" id="mono-plaintext" placeholder="Enter plaintext here...">
+        <label for="mono-alphabet">Substitution Alphabet:</label>
+        <input type="text" id="mono-alphabet" placeholder="Enter substitution alphabet...">
+        <button onclick="encryptMono()">Encrypt</button>
+        <p id="mono-ciphertext"></p>
+    </section>
+
+    <section>
+        <h2>Decryption Tool</h2>
+        <label for="mono-ciphertext-input">Enter Ciphertext:</label>
+        <input type="text" id="mono-ciphertext-input" placeholder="Enter ciphertext here...">
+        <label for="mono-alphabet-decrypt">Substitution Alphabet:</label>
+        <input type="text" id="mono-alphabet-decrypt" placeholder="Enter substitution alphabet...">
+        <button onclick="decryptMono()">Decrypt</button>
+        <p id="mono-plaintext-output"></p>
+    </section>
+
+    <section>
+        <h2>Quiz</h2>
+        <form id="mono-quiz" onsubmit="submitQuiz(event)">
+            <div>
+                <p>1. What is a Monoalphabetic Cipher?</p>
+                <label>
+                    <input type="radio" name="q1" value="A"> A transposition cipher.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="B"> A substitution cipher using a fixed substitution alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="C"> A substitution cipher using a single key.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="D"> A combination of several different ciphers.
+                </label>
+            </div><br>
+            <div>
+                <p>2. How is the substitution alphabet determined in a Monoalphabetic Cipher?</p>
+                <label>
+                    <input type="radio" name="q2" value="A"> By keeping the same alphabet order as the plaintext.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="B"> By randomly shuffling the standard alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="C"> By shifting the standard alphabet by a fixed number of
+                    positions.
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="D"> By using the reverse of the standard alphabet.
+                </label>
+            </div><br>
+            <div>
+                <p>3. The Monoalphabetic Cipher is considered a strong encryption method for secure communication in modern times.</p>
+                <label>
+                    <input type="radio" name="q3" value="A"> True.
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="B"> False.
+                </label><br>
+                <label>
+            </div><br>
+            <div>
+                <p>4. If two different plaintext letters are encrypted using the same Monoalphabetic Cipher, they will always result in different ciphertext letters.</p>
+                <label>
+                    <input type="radio" name="q4" value="A"> True.
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="B"> False.
+                </label><br>
+                <label>
+            </div><br>
+            <div>
+                <p>5. In a Monoalphabetic Cipher, the key used for encryption and decryption is:</p>
+                <label>
+                    <input type="radio" name="q5" value="A"> A fixed pattern based on the alphabet.
+                </label><br>
+                <label>
+                    <input type="radio" name="q5" value="B"> An ordered list of letters from A to Z.
+                </label><br>
+                <label>
+                    <input type="radio" name="q5" value="C"> A mapping of each letter to another letter.
+                </label><br>
+                <label>
+                    <input type="radio" name="q5" value="D"> The same as a Vigenère cipher.
+                </label>
+            </div><br>
+            <div>
+                <p>6. What is a major weakness of the Monoalphabetic Cipher?</p>
+                <label>
+                    <input type="radio" name="q6" value="A"> It's difficult to implement.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="B"> It only works with numbers.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="C"> It uses too many different keys.
+                </label><br>
+                <label>
+                    <input type="radio" name="q6" value="D"> It's easy to crack with frequency analysis.
+                </label>
+            </div><br>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+        <p id="mono-quiz-results"></p>
+    </section>
+</body>
+
+</html>

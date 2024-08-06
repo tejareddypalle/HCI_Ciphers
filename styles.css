@@ -1,0 +1,201 @@
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef0f3;
+    color: #2e2e2e;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+p {
+    color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common styles for all pages */
+header, footer {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Index Page styles */
+body.index {
+    background-color: #e3f2fd;
+}
+
+header.index, footer.index {
+    background-color: #2196f3;
+}
+
+nav ul li a.index {
+    background-color: #1976d2;
+    color: white;
+}
+
+nav ul li a.index:hover {
+    background-color: #0d47a1;
+}
+
+button.index {
+    background-color: #1976d2;
+    color: white;
+}
+
+button.index:hover {
+    background-color: #0d47a1;
+}
+
+/* Caesar Cipher Page styles */
+body.caesar {
+    background-color: #e8f5e9;
+}
+
+header.caesar, footer.caesar {
+    background-color: #4caf50;
+}
+
+nav ul li a.caesar {
+    background-color: #388e3c;
+    color: white;
+}
+
+nav ul li a.caesar:hover {
+    background-color: #1b5e20;
+}
+
+button.caesar {
+    background-color: #388e3c;
+    color: white;
+}
+
+button.caesar:hover {
+    background-color: #1b5e20;
+}
+
+/* Monoalphabetic Cipher Page styles */
+body.monoalphabetic {
+    background-color: #ffebee;
+}
+
+header.monoalphabetic, footer.monoalphabetic {
+    background-color: #e53935;
+}
+
+nav ul li a.monoalphabetic {
+    background-color: #c62828;
+    color: white;
+}
+
+nav ul li a.monoalphabetic:hover {
+    background-color: #b71c1c;
+}
+
+button.monoalphabetic {
+    background-color: #c62828;
+    color: white;
+}
+
+button.monoalphabetic:hover {
+    background-color: #b71c1c;
+}
+
+/* Quiz styles */
+.quiz {
+    margin-top: 20px;
+}
+
+.quiz label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.quiz input[type="radio"] {
+    display: none;
+}
+
+.quiz input[type="radio"]:checked + label {
+    background-color: #d1e7ff;
+    border-color: #007bff;
+}
+
+.quiz input[type="checkbox"]:checked + label {
+    background-color: #c8e6c9;
+    border-color: #388e3c;
+}
+
+.quiz input[type="radio"]:checked + label,
+.quiz input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+/* Image styles for Caesar Cipher Page */
+.caesar img {
+    max-width: 20%; /* Adjusts the width of the image to fit within 80% of the container */
+    height: 20%; /* Maintains aspect ratio */
+    margin: 20px auto; /* Adds margin for spacing and centers the image */
+    display: block; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the image */
+}
+
+/* Image styles for Monoalphabetic Cipher Page */
+.monoalphabetic img {
+    max-width: 40%; /* Adjusts the width of the image to fit within 80% of the container */
+    height: 40%; /* Maintains aspect ratio */
+    margin: 20px auto; /* Adds margin for spacing and centers the image */
+    display: block; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow to the image */
+}
